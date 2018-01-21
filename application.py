@@ -62,7 +62,14 @@ def submitPizza():
 	}
 	#json_new_val = str(json_val).replace("'", '"')
 	#r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
-	r = requests.get('http://localhost:3000/api/Entity/factory')
+	payload = {
+		  "$class": "org.acme.howto.Entity",
+		  "entityId": "7984",
+		  "entityType": "factory",
+		  "firstName": request.form['firstname'].encode("utf-8"),
+		  "lastName": request.form['lastname'].encode("utf-8")
+		}
+	r = requests.post('http://localhost:3000/api/Entity/factory', data=payload)
 	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.url))
 
 @app.route("/wholesaler")
