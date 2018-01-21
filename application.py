@@ -66,8 +66,8 @@ def submitPizza():
 		  "$class": "org.acme.howto.Entity",
 		  "entityId": "factory",
 		  "entityType": "factory",
-		  "firstName": request.form['firstname'].encode("utf-8"),
-		  "lastName": request.form['lastname'].encode("utf-8")
+		  "firstName": "Cool",
+		  "lastName": "Man"
 		}
 	r = requests.post('http://localhost:3000/api/Entity', data=json.dumps(payload))
 	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.url))
