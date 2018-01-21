@@ -51,7 +51,7 @@ def submitPizza():
 		rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
 	return("The status code of the POST/PUT is: "+ str(rT.status_code) + " , " + str(rT.text))
 
-@app.route("/changeOwner<owner>", methods=['POST','GET'])
+@app.route("/changeOwner/<owner>", methods=['POST','GET'])
 def changeOwner(owner):
 	return owner
 
