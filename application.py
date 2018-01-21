@@ -54,15 +54,15 @@ def submitPizza():
 	json_val = {
 	  "$class": "org.acme.howto.Pizza",
 	  "pizzaId": "909012",
-	  "timestamp": request.form['timestamp'].lower().encode("utf-8"),
-	  "date": request.form['date'].lower().encode("utf-8"),
-	  "state": request.form['state'].lower().encode("utf-8"),
+	  "timestamp": "12:00:00",
+	  "date": "21/01/2018",
+	  "state": "production",
 	  "owner": {
 	    "$class": "org.acme.howto.Entity",
 	    "entityId": "factoryabcd",
 	    "entityType": "factory",
-	    "firstName": request.form['firstname'].encode("utf-8"),
-	    "lastName": request.form['lastname'].encode("utf-8")
+	    "firstName": "Rocky",
+	    "lastName": "Balboa"
 	  }
 	}
 	#json_new_val = str(json_val).replace("'", '"')
