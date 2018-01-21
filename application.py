@@ -56,10 +56,10 @@ def submitPizza():
 	  "pizzaId": "909012",
 	  "timestamp": request.form['timestamp'].lower().encode("utf-8"),
 	  "date": request.form['date'].lower().encode("utf-8"),
-	  "state": state.production,
+	  "state": request.form['state'].lower().encode("utf-8").production,
 	  "owner": {
 	    "$class": "org.acme.howto.Entity",
-	    "entityId": "factoryabc",
+	    "entityId": "factoryabcd",
 	    "entityType": "factory",
 	    "firstName": request.form['firstname'].encode("utf-8"),
 	    "lastName": request.form['lastname'].encode("utf-8")
@@ -69,7 +69,7 @@ def submitPizza():
 	#r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
 	payload = {
 		  "$class": "org.acme.howto.Entity",
-		  "entityId": "factory769",
+		  "entityId": "factory456",
 		  "entityType": "factory",
 		  "firstName": request.form['firstname'].encode("utf-8"),
 		  "lastName": request.form['lastname'].encode("utf-8")
