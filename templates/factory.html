@@ -4,21 +4,8 @@
   <body>
     <h3>Welcome, {{ title }}!</h3>
 
-    <div class="transactions">
-      <h4>Transactions (GET Request on Pizza Asset)</h4>
-      <hr/>
-      <table>
-        <thead>
-          <th>ID</th>
-        </thead>
-        <tr>
-          <td>Value</td>
-        </tr>
-      </table>
-    </div>
-
     <div class="create">
-      <h4>Create</h4>
+      <h4>Production</h4>
       <hr/>
       <!-- START FORM -->
         <div class="row">
@@ -34,7 +21,7 @@
             </div>
             <!-- State/Owner -->
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col s12">
                 <select name="state">
                   <option value="" disabled selected>Choose your option</option>
                   <option value="production">Production</option>
@@ -42,9 +29,6 @@
                   <option value="packaging">Packaging</option>
                   <option value="distribution">Distribution</option>
                 </select>
-              </div>
-              <div class="input-field col s6">
-                <input placeholder="Owner" id="owner" type="text" >
               </div>
             </div>
             <!-- First Name/Last Name -->
