@@ -8,39 +8,38 @@
       <!-- START FORM -->
         <div class="row">
           <form class="col s12" action="submitPizza" method="POST">
-          <!-- State -->
-            <div class="row">
-              <div class="input-field col s12">
-                <select name="state">
-                  <option value="" disabled selected>Choose pizza state</option>
-                  <option value="production">Production</option>
-                  <option value="freezing">Freezing</option>
-                  <option value="packaging">Packaging</option>
-                  <option value="distribution">Distribution</option>
-                </select>
+            <!-- State -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <select name="state">
+                    <option value="" disabled selected>Choose pizza state</option>
+                    <option value="production">Production</option>
+                    <option value="freezing">Freezing</option>
+                    <option value="packaging">Packaging</option>
+                    <option value="distribution">Distribution</option>
+                  </select>
+                </div>
               </div>
-            </div>
-
-            <!-- Timestamp/Date -->
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="Timestamp" name="timestamp" type="text" >
+              <!-- Timestamp/Date -->
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="Timestamp" name="timestamp" type="text" >
+                </div>
+                <div class="input-field col s6">
+                  <input placeholder="Date" name="date" type="text" >
+                </div>
               </div>
-              <div class="input-field col s6">
-                <input placeholder="Date" name="date" type="text" >
+              <!-- First Name/Last Name -->
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="First Name" id="timestamp" name="firstname" type="text" >
+                </div>
+                <div class="input-field col s6">
+                  <input placeholder="Last Name" name="lastname" id="date" type="text" >
+                </div>
               </div>
-            </div>
-            <!-- First Name/Last Name -->
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="First Name" id="timestamp" name="firstname" type="text" >
-              </div>
-              <div class="input-field col s6">
-                <input placeholder="Last Name" name="lastname" id="date" type="text" >
-              </div>
-            </div>
-            <input class="waves-light btn our-colour" type="submit" value="Submit" style="color: white;"  name="">
-            <input class="waves-light btn our-colour" type="button" value="Transfer Ownership" style="color: white;"  name="">
+              <input type="submit" value="Submit" name="">
+              <input class="waves-light btn our-colour" type="button" value="Transfer Ownership" style="color: white;"  name="">
           </form>
         </div>
       <!-- END FORM -->
