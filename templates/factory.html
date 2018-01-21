@@ -44,28 +44,23 @@
       <table>
         <thead>
           <tr>
-              <th>Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
+              <th>Pizza ID</th>
+              <th>Timestamp</th>
+              <th>Date</th>
+              <th>State</th>
+              <th>Owner</th>
           </tr>
         </thead>
-
         <tbody>
+          {% for arr in transactions %}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>{{ arr['pizzaId'] }}</td>
+            <td>{{ arr['timestamp'] }}</td>
+            <td>{{ arr['date'] }}</td>
+            <td>{{ arr['state'] }}</td>
+            <td>{{ arr['owner'] }}</td>
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
       <!-- END TABLE -->
