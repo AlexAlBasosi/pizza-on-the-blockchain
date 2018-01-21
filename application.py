@@ -42,24 +42,27 @@ def factory():
 	}
 	return render_template('factory.html', title="Factory", transactions=transactions)
 
+import json 
+
 @app.route("/submitPizza", methods=['POST', 'GET'])
 def submitPizza():
 	json_val = {
 	  "$class": "org.acme.howto.Pizza",
-	  "pizzaId": "pizza",
-	  "timestamp": request.form['firstname'],
-	  "date": request.form['date'],
-	  "state": request.form['state'],
+	  "pizzaId": "random",
+	  "timestamp": request.form['timestamp'].lower().encode("utf-8"),
+	  "date": request.form['date'].lower().encode("utf-8"),
+	  "state": request.form['state'].lower().encode("utf-8"),
 	  "owner": {
 	    "$class": "org.acme.howto.Entity",
 	    "entityId": "factory",
 	    "entityType": "factory",
-	    "firstName": request.form['firstname'],
-	    "lastName": request.form['lastname']
+	    "firstName": request.form['firstname'].encode("utf-8"),
+	    "lastName": request.form['lastname'].encode("utf-8")
 	  }
 	}
-	requests.post('http://localhost:3000/api/Pizza/pizza', data = json_val)
-	return(str(json_val))
+	json_new_val = str(json_val).replace("'", '"')
+	r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
+	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.url) + " , " + str(json_new_val))
 
 @app.route("/wholesaler")
 def wholesaler():
