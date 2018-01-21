@@ -58,8 +58,14 @@ def submitPizza():
 		  "state": request.form['state'].encode('utf-8').lower(),
 		  "owner": "factory"
 		}	
+	transactions_val = { 
+		{
+		  "$class": "org.acme.howto.ChangeStateTo"+state_info.title(),
+  		  "pizza": random_val
+		}
 	r = requests.post('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
-	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.text))
+	rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
+	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(rT.status_code))
 
 @app.route("/wholesaler")
 def wholesaler():
