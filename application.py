@@ -52,7 +52,7 @@ def submitPizza():
 	state_info = request.form['state'].encode('utf-8').lower()
 	json_val = {
 		  "$class": "org.acme.howto.Pizza",
-		  "pizzaId": random_val,
+		  "pizzaId": "ABC"+random_val,
 		  "timestamp": request.form['timestamp'].encode('utf-8'),
 		  "date": request.form['date'].encode('utf-8'),
 		  "state": request.form['state'].encode('utf-8').lower(),
@@ -60,7 +60,7 @@ def submitPizza():
 		}	
 	transactions_val = {
 		  "$class": "org.acme.howto.ChangeStateTo"+state_info.title(),
-  		  "pizza": random_val
+  		  "pizza": "ABC"+random_val
 		}
 	r = requests.post('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
 	rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
