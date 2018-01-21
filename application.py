@@ -44,8 +44,6 @@ def factory():
 	return render_template('factory.html', title="Factory", transactions=transactions)
 
 import json 
-
-from enum import Enum     # for enum34, or the stdlib version
 import random
 
 @app.route("/submitPizza", methods=['POST', 'GET'])
@@ -59,14 +57,8 @@ def submitPizza():
 		  "date": request.form['date'].encode('utf-8'),
 		  "state": request.form['state'].encode('utf-8').lower(),
 		  "owner": "factory"
-		}
-	transaction_val = {
-		  "$class": "org.acme.howto.ChangeStateTo"+state_info.title(),
-		  "pizza": random_val
-		}
-	
+		}	
 	r = requests.post('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
-	#rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transaction_val)
 	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.text))
 
 @app.route("/wholesaler")
