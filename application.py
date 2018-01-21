@@ -52,19 +52,13 @@ def submitPizza():
 # from aenum import Enum  # for the aenum version
 	state = Enum('State', 'production distribution')
 	json_val = {
-	  "$class": "org.acme.howto.Pizza",
-	  "pizzaId": "909012",
-	  "timestamp": "12:00:00",
-	  "date": "21/01/2018",
-	  "state": "production",
-	  "owner": {
-	    "$class": "org.acme.howto.Entity",
-	    "entityId": "factory",
-	    "entityType": "factory",
-	    "firstName": request.form['firstname'].encode("utf-8"),
-	    "lastName": request.form['lastname'].encode("utf-8")
-	  }
-	}
+		  "$class": "org.acme.howto.Pizza",
+		  "pizzaId": "anything123",
+		  "timestamp": "12:00:00",
+		  "date": "22/01/2018",
+		  "state": "production",
+		  "owner": "factory"
+		}
 	#json_new_val = str(json_val).replace("'", '"')
 	#r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
 	payload = {
@@ -74,6 +68,7 @@ def submitPizza():
 		  "firstName": request.form['firstname'].encode("utf-8"),
 		  "lastName": request.form['lastname'].encode("utf-8")
 		}
+	
 	#r1 = requests.post('http://localhost:3000/api/Entity', data=payload) 
 	r = requests.post('http://localhost:3000/api/Pizza', data=json_val)
 	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.text))
