@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 get_pizza_url = "http://localhost:3000/api/Pizza/pizza"
 post_pizza_url = "http://localhost:3000/api/Pizza/pizza"
+post_entity_url = "http://localhost:3000/api/Entity"
 post_pizza_json = {
   "$class": "org.acme.howto.Pizza",
   "pizzaId": "3901",
@@ -48,7 +49,7 @@ import json
 def submitPizza():
 	json_val = {
 	  "$class": "org.acme.howto.Pizza",
-	  "pizzaId": "random",
+	  "pizzaId": "909012",
 	  "timestamp": request.form['timestamp'].lower().encode("utf-8"),
 	  "date": request.form['date'].lower().encode("utf-8"),
 	  "state": request.form['state'].lower().encode("utf-8"),
@@ -69,7 +70,7 @@ def submitPizza():
 		  "firstName": request.form['firstname'].encode("utf-8"),
 		  "lastName": request.form['lastname'].encode("utf-8")
 		}
-	r = requests.post('http://localhost:3000/api/Entity', data=payload)
+	r = requests.post('http://localhost:3000/api/Pizza', data=json_val)
 	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.text))
 
 @app.route("/wholesaler")
