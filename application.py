@@ -45,14 +45,18 @@ def factory():
 
 import json 
 
+from enum import Enum     # for enum34, or the stdlib version
+
 @app.route("/submitPizza", methods=['POST', 'GET'])
 def submitPizza():
+# from aenum import Enum  # for the aenum version
+	state = Enum('State', 'production distribution')
 	json_val = {
 	  "$class": "org.acme.howto.Pizza",
 	  "pizzaId": "909012",
 	  "timestamp": request.form['timestamp'].lower().encode("utf-8"),
 	  "date": request.form['date'].lower().encode("utf-8"),
-	  "state": request.form['state'].lower().encode("utf-8"),
+	  "state": state.production,
 	  "owner": {
 	    "$class": "org.acme.howto.Entity",
 	    "entityId": "factoryabc",
