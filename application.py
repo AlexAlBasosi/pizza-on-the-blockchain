@@ -53,7 +53,7 @@ def submitPizza():
 	state = Enum('State', 'production distribution')
 	json_val = {
 		  "$class": "org.acme.howto.Pizza",
-		  "pizzaId": "anything456",
+		  "pizzaId": "anything476",
 		  "timestamp": request.form['timestamp'].encode('utf-8'),
 		  "date": request.form['date'].encode('utf-8'),
 		  "state": request.form['state'].encode('utf-8').lower(),
@@ -69,9 +69,15 @@ def submitPizza():
 		  "lastName": request.form['lastname'].encode("utf-8")
 		}
 	
+	transaction_val = {
+		  "$class": "org.acme.howto.ChangeStateToFreezing",
+		  "pizza": "anything476"
+		}
+	
 	#r1 = requests.post('http://localhost:3000/api/Entity', data=payload) 
 	r = requests.post('http://localhost:3000/api/Pizza', data=json_val)
-	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.text))
+	rT = requests.post('http://localhost:3000/api/ChangeStateToFreezing', data=transaction_val)
+	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(rT.status_code))
 
 @app.route("/wholesaler")
 def wholesaler():
