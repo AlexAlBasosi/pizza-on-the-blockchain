@@ -56,10 +56,7 @@ def changeOwner(owner):
 	# Create the new owner - wholesaler
 	wholesaler_data = {
 	  "$class": "org.acme.howto.Entity",
-	  "entityId": "wholesaler",
-	  "ownerEntityType": "wholesaler",
-	  "ownerFirstName": "Mr",
-	  "ownerLastName": "Wholesaler"
+	  "entityId": "wholesaler"
 	}
 	r1 = requests.post('http://localhost:3000/api/Entity', data=wholesaler_data)
 	# Change Ownership
