@@ -64,10 +64,10 @@ def submitPizza():
 	#r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
 	payload = {
 		  "$class": "org.acme.howto.Entity",
-		  "entityId": "factory123",
+		  "entityId": "factory456",
 		  "entityType": "factory",
-		  "firstName": "Cool",
-		  "lastName": "Man"
+		  "firstName": request.form['firstname'].encode("utf-8"),
+		  "lastName": request.form['lastname'].encode("utf-8")
 		}
 	r = requests.post('http://localhost:3000/api/Entity', data=payload)
 	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.text))
