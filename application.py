@@ -58,8 +58,7 @@ def submitPizza():
 		  "state": request.form['state'].encode('utf-8').lower(),
 		  "owner": "factory"
 		}	
-	transactions_val = { 
-		{
+	transactions_val = {
 		  "$class": "org.acme.howto.ChangeStateTo"+state_info.title(),
   		  "pizza": random_val
 		}
