@@ -53,10 +53,10 @@ def submitPizza():
 	state = Enum('State', 'production distribution')
 	json_val = {
 		  "$class": "org.acme.howto.Pizza",
-		  "pizzaId": "anything123",
-		  "timestamp": "12:00:00",
-		  "date": "22/01/2018",
-		  "state": "production",
+		  "pizzaId": "anything456",
+		  "timestamp": request.form['timestamp'].encode('utf-8'),
+		  "date": request.form['date'].encode('utf-8'),
+		  "state": request.form['state'].encode('utf-8').lower(),
 		  "owner": "factory"
 		}
 	#json_new_val = str(json_val).replace("'", '"')
