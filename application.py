@@ -62,7 +62,7 @@ def submitPizza():
 	}
 	#json_new_val = str(json_val).replace("'", '"')
 	#r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
-	r = requests.get('http://localhost:3000/api/Entity/entity')
+	r = requests.get('http://localhost:3000/api/Entity/factory')
 	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.url))
 
 @app.route("/wholesaler")
