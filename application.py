@@ -64,7 +64,7 @@ def submitPizza():
 	#r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
 	payload = {
 		  "$class": "org.acme.howto.Entity",
-		  "entityId": "7984",
+		  "entityId": "factory",
 		  "entityType": "factory",
 		  "firstName": request.form['firstname'].encode("utf-8"),
 		  "lastName": request.form['lastname'].encode("utf-8")
