@@ -5,11 +5,24 @@
     <h3>Welcome, {{ title }}!</h3>
 
     <div class="create">
-      <h4>Production</h4>
+      <h4>Pizza State</h4>
       <hr/>
       <!-- START FORM -->
         <div class="row">
           <form class="col s12" action="submitPizza" method="POST">
+          <!-- State -->
+            <div class="row">
+              <div class="input-field col s12">
+                <select name="state">
+                  <option value="" disabled selected>Choose pizza state</option>
+                  <option value="production">Production</option>
+                  <option value="freezing">Freezing</option>
+                  <option value="packaging">Packaging</option>
+                  <option value="distribution">Distribution</option>
+                </select>
+              </div>
+            </div>
+
             <!-- Timestamp/Date -->
             <div class="row">
               <div class="input-field col s6">
@@ -17,18 +30,6 @@
               </div>
               <div class="input-field col s6">
                 <input placeholder="Date" name="date" type="text" >
-              </div>
-            </div>
-            <!-- State/Owner -->
-            <div class="row">
-              <div class="input-field col s12">
-                <select name="state">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="production">Production</option>
-                  <option value="freezing">Freezing</option>
-                  <option value="packaging">Packaging</option>
-                  <option value="distribution">Distribution</option>
-                </select>
               </div>
             </div>
             <!-- First Name/Last Name -->
