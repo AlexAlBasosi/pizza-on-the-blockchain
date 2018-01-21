@@ -46,14 +46,16 @@ def factory():
 import json 
 
 from enum import Enum     # for enum34, or the stdlib version
+import random
 
 @app.route("/submitPizza", methods=['POST', 'GET'])
 def submitPizza():
+	random_val = str(random.randint(1, 9999))
 # from aenum import Enum  # for the aenum version
 	state = Enum('State', 'production distribution')
 	json_val = {
 		  "$class": "org.acme.howto.Pizza",
-		  "pizzaId": "anything476",
+		  "pizzaId": random_val,
 		  "timestamp": request.form['timestamp'].encode('utf-8'),
 		  "date": request.form['date'].encode('utf-8'),
 		  "state": request.form['state'].encode('utf-8').lower(),
@@ -63,7 +65,7 @@ def submitPizza():
 	#r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
 	payload = {
 		  "$class": "org.acme.howto.Entity",
-		  "entityId": "factory456",
+		  "entityId": random_val,
 		  "entityType": "factory",
 		  "firstName": request.form['firstname'].encode("utf-8"),
 		  "lastName": request.form['lastname'].encode("utf-8")
@@ -71,11 +73,11 @@ def submitPizza():
 	
 	transaction_val = {
 		  "$class": "org.acme.howto.ChangeStateToFreezing",
-		  "pizza": "anything476"
+		  "pizza": random_val
 		}
 	
 	#r1 = requests.post('http://localhost:3000/api/Entity', data=payload) 
-	r = requests.post('http://localhost:3000/api/Pizza', data=json_val)
+	r = requests.post('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
 	rT = requests.post('http://localhost:3000/api/ChangeStateToFreezing', data=transaction_val)
 	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(rT.status_code))
 
