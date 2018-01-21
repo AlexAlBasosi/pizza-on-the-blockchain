@@ -59,7 +59,7 @@ def submitPizza():
 	  "state": "production",
 	  "owner": {
 	    "$class": "org.acme.howto.Entity",
-	    "entityId": "factoryabcd",
+	    "entityId": "factory456",
 	    "entityType": "factory",
 	    "firstName": "Rocky",
 	    "lastName": "Balboa"
