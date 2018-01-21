@@ -60,9 +60,10 @@ def submitPizza():
 	    "lastName": request.form['lastname'].encode("utf-8")
 	  }
 	}
-	json_new_val = str(json_val).replace("'", '"')
-	r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
-	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.url) + " , " + str(json_new_val))
+	#json_new_val = str(json_val).replace("'", '"')
+	#r = requests.post('http://localhost:3000/api/Pizza/random', data=json.loads(json_new_val))
+	r = requests.get('http://localhost:3000/api/Entity/entity')
+	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.url))
 
 @app.route("/wholesaler")
 def wholesaler():
