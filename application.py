@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 import requests
 app = Flask(__name__)
 
+import json 
+import random
+
 @app.route("/")
 @app.route("/index")
 def index():
@@ -9,13 +12,8 @@ def index():
 
 @app.route("/factory")
 def factory():
-	transactions = {
-		"pizza": {"name": "pizza123", "date": "29/06/1996"}
-	}
-	return render_template('factory.html', title="Factory", transactions=transactions)
-
-import json 
-import random
+	r = requests.get('http://localhost:3000/api/Pizza') 
+	return render_template('factory.html', title="Factory", transactions=r.json)
 
 @app.route("/submitPizza", methods=['POST', 'GET'])
 def submitPizza():
