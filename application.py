@@ -2,35 +2,6 @@ from flask import Flask, render_template, request
 import requests
 app = Flask(__name__)
 
-get_pizza_url = "http://localhost:3000/api/Pizza/pizza"
-post_pizza_url = "http://localhost:3000/api/Pizza/pizza"
-post_entity_url = "http://localhost:3000/api/Entity"
-post_pizza_json = {
-  "$class": "org.acme.howto.Pizza",
-  "pizzaId": "3901",
-  "timestamp": "",
-  "date": "",
-  "state": "production",
-  "owner": {
-    "$class": "org.acme.howto.Entity",
-    "entityId": "3592",
-    "entityType": "",
-    "firstName": "",
-    "lastName": ""
-  }
-}
-'''
-To create Pizza: 
-- timestamp (now)
-- date (now)
-- state (dropdown)
-- owner (factory)
-TO JSON AND THEN POST TO API 
-pizzaId: "pizza"
-entityId: "factory"
-entityType: "factory"
-'''
-
 @app.route("/")
 @app.route("/index")
 def index():
@@ -48,23 +19,42 @@ import random
 
 @app.route("/submitPizza", methods=['POST', 'GET'])
 def submitPizza():
-	random_val = str(random.randint(1, 9999))
 	state_info = request.form['state'].encode('utf-8').lower()
-	json_val = {
-		  "$class": "org.acme.howto.Pizza",
-		  "pizzaId": "ABC"+random_val,
-		  "timestamp": request.form['timestamp'].encode('utf-8'),
-		  "date": request.form['date'].encode('utf-8'),
-		  "state": request.form['state'].encode('utf-8').lower(),
-		  "owner": "factory"
-		}	
-	transactions_val = {
-		  "$class": "org.acme.howto.ChangeStateTo"+state_info.title(),
-  		  "pizza": "ABC"+random_val
-		}
-	r = requests.post('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
-	rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
-	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(rT.status_code) + " , " + str(rT.text))
+	if(state_info=="production"):
+		json_val = {
+			  "$class": "org.acme.howto.Pizza",
+			  "pizzaId": "p1zzA",
+			  "timestamp": request.form['timestamp'].encode('utf-8'),
+			  "date": request.form['date'].encode('utf-8'),
+			  "state": request.form['state'].encode('utf-8').lower(),
+			  "owner": "factory"
+			}	
+		transactions_val = {
+			  "$class": "org.acme.howto.ChangeStateTo"+state_info.title(),
+			  "pizza": "p1zzA"
+			}
+		r = requests.post('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
+		rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
+	else:
+		json_val = {
+			  "$class": "org.acme.howto.Pizza",
+			  "pizzaId": "p1zzA",
+			  "timestamp": request.form['timestamp'].encode('utf-8'),
+			  "date": request.form['date'].encode('utf-8'),
+			  "state": request.form['state'].encode('utf-8').lower(),
+			  "owner": "factory"
+			}	
+		transactions_val = {
+			  "$class": "org.acme.howto.ChangeStateTo"+state_info.title(),
+			  "pizza": "p1zzA"
+			}
+		r = requests.put('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
+		rT = requests.put('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
+	return("The status code of the POST/PUT is: "+ str(r.status_code) + " , " + str(rT.status_code) + " , " + str(rT.text))
+
+@app.route("/changeOwner<owner>", methods=['POST','GET'])
+def changeOwner(owner):
+	return owner
 
 @app.route("/wholesaler")
 def wholesaler():
