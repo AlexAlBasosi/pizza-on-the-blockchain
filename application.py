@@ -74,9 +74,9 @@ def submitPizza():
 		  "firstName": request.form['firstname'].encode("utf-8"),
 		  "lastName": request.form['lastname'].encode("utf-8")
 		}
-	r1 = requests.post('http://localhost:3000/api/Entity', data=payload) 
+	#r1 = requests.post('http://localhost:3000/api/Entity', data=payload) 
 	r = requests.post('http://localhost:3000/api/Pizza', data=json_val)
-	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r1.text))
+	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.text))
 
 @app.route("/wholesaler")
 def wholesaler():
