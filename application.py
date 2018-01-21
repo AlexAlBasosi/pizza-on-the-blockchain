@@ -56,7 +56,7 @@ def submitPizza():
 	  "pizzaId": "909012",
 	  "timestamp": request.form['timestamp'].lower().encode("utf-8"),
 	  "date": request.form['date'].lower().encode("utf-8"),
-	  "state": request.form['state'].lower().encode("utf-8").production,
+	  "state": request.form['state'].lower().encode("utf-8"),
 	  "owner": {
 	    "$class": "org.acme.howto.Entity",
 	    "entityId": "factoryabcd",
