@@ -59,7 +59,7 @@ def submitPizza():
 	  "state": "production",
 	  "owner": {
 	    "$class": "org.acme.howto.Entity",
-	    "entityId": "factory456",
+	    "entityId": "factory",
 	    "entityType": "factory",
 	    "firstName": request.form['firstname'].encode("utf-8"),
 	    "lastName": request.form['lastname'].encode("utf-8")
