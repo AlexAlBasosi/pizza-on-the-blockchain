@@ -48,11 +48,11 @@ import random
 
 @app.route("/submitPizza", methods=['POST', 'GET'])
 def submitPizza():
-	random_val = str(random.randint(1, 9999))
+# 	random_val = str(random.randint(1, 9999))
 	state_info = request.form['state'].encode('utf-8').lower()
 	json_val = {
 		  "$class": "org.acme.howto.Pizza",
-		  "pizzaId": random_val,
+		  "pizzaId": "115566",
 		  "timestamp": request.form['timestamp'].encode('utf-8'),
 		  "date": request.form['date'].encode('utf-8'),
 		  "state": request.form['state'].encode('utf-8').lower(),
