@@ -48,8 +48,7 @@ def submitPizza():
 			  "$class": "org.acme.howto.ChangeStateTo"+state_info.title(),
 			  "pizza": "p1zzA"
 			}
-		r = requests.put('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
-		rT = requests.put('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
+		rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
 	return("The status code of the POST/PUT is: "+ str(r.status_code) + " , " + str(rT.status_code) + " , " + str(rT.text))
 
 @app.route("/changeOwner<owner>", methods=['POST','GET'])
