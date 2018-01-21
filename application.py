@@ -66,8 +66,8 @@ def submitPizza():
 		}
 	
 	r = requests.post('http://localhost:3000/api/Pizza', data=json_val) # create a new Pizza (random number)
-	rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transaction_val)
-	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(rT.status_code))
+	#rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transaction_val)
+	return("The status code of the POST is: "+ str(r.status_code) + " , " + str(r.text))
 
 @app.route("/wholesaler")
 def wholesaler():
