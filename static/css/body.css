@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "myfont";
+    src: url("/static/font/Dubai-Regular.woff") format('woff');
+}
+
+body {
+	font-family: myfont, serif;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+
+.circle-text {
+	display: table-cell;
+	height: 200px;
+	width: 200px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 50%;
+	background: #534072;
+	color: #fff;
+	font-size: 23px;
+}
+
+.acircle-text {
+	display: table-cell;
+	height: 100px;
+	width: 200px;
+	text-align: center;
+	vertical-align: middle;
+	background: #534072;
+	color: #fff;
+	font-size: 23px;
+}
+
+.active { 
+	background: pink;
+}
+
+.our-colour {
+	background: #534072;
+}
+
+.hover-our-colour:hover {
+	background: #534072;
+}
+
+#welcome_icons {
+	padding: 70;
+	text-align: center;
+}
+
+.content {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.border {
+	border: thin solid blue;
+}
+
+.modal {
+	max-height: 120%;
+	/*width: 70%;*/
+}
+
+.modal-bigger {
+	width: 80%;
+	height: 85% !important;
+}
+
+.modal-smaller {
+	height: 61% !important;
+}
+
+.oval {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50px; /*50px vs. 50%*/
+}

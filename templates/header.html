@@ -1,0 +1,34 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/body.css') }}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>{{ title }} - Pizza on the Blockchain!</title>
+  <script type="text/javascript">
+// For the DatePicker utility from MaterializeCSS :)
+  $(document).ready(function(){
+    $('.datepicker').datepicker({
+      container: 'body'
+    });
+  });
+  $(document).ready(function(){
+    $('select').select();
+  });
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+</script>
+
+</head>
+<nav>
+  <div class="nav-wrapper our-colour">
+    <a href="/index" class="brand-logo"><i class="material-icons md-48">&nbsp;home</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/factory">Factory</a></li>
+      <li><a href="/wholesaler">Wholesaler</a></li>
+      <li><a href="/retailer">Retailer</a></li>
+      <li><a href="/customer">Customer</a></li>
+    </ul>
+  </div>
+</nav>

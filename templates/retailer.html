@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  {% include 'header.html' %}
+  <body>
+    <h3>Welcome, {{ title }}!</h3>
+
+    <div class="transactions">
+      <h4>Transactions</h4>
+      <hr/>
+      <table>
+        <thead>
+          <th>ID</th>
+        </thead>
+        <tr>
+          <td>Value</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="action">
+      <h4>Actions</h4>
+      <hr/>
+      <a class="waves-effect waves-light btn our-colour">Change Owner</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  {% include 'header.html' %}
+  <body>
+    <h3>Welcome, {{ title }}!</h3>
+
+    <div class="transactions">
+      <h4>Transactions</h4>
+      <hr/>
+      <table>
+        <thead>
+          <th>ID</th>
+        </thead>
+        <tr>
+          <td>Value</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="create">
+      <h4>Create</h4>
+      <hr/>
+      <!-- START FORM -->
+        <div class="row">
+          <form class="col s12">
+            <!-- Timestamp/Date -->
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Timestamp" id="timestamp" type="text" >
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="Date" class="datepicker" id="date" type="text" >
+              </div>
+            </div>
+            <!-- State/Owner -->
+            <div class="row">
+              <div class="input-field col s6">
+                <select>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">Production</option>
+                  <option value="2">Freezing</option>
+                  <option value="3">Packaging</option>
+                  <option value="4">Distribution</option>
+                </select>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="Owner" id="owner" type="text" >
+              </div>
+            </div>
+            <a class="waves-effect waves-light btn our-colour">Submit</a>
+          </form>
+        </div>
+      <!-- END FORM -->
+    </div>
+      <h4>Actions</h4>
+      <hr/>
+    <div class="action">
+        <a class="waves-effect waves-light btn our-colour">Change State</a>
+        <a class="waves-effect waves-light btn our-colour">Change Owner</a>
+    </div>
+  </body>
+</html>
