@@ -5,6 +5,13 @@ app = Flask(__name__)
 import json 
 import random
 
+def myFunc(pizzaId):
+	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
+	return("The status code of the POST/PUT is: "+ str(r.status_code) + " , " + str(r.text))
+
+app.jinja_env.globals.update(myFunc=myFunc) 
+
+
 @app.route("/")
 @app.route("/index")
 def index():
