@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 import json 
 import random
+import dateutil.parser
 
 def myFunc(pizzaId):
 	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
@@ -11,7 +12,9 @@ def myFunc(pizzaId):
 	return(str(json_val).title())
 
 def myChangeFunc(timestamp):
-	return ("Hey",timestamp)
+	t = dateutil.parser.parse(timestamp)
+	finalT = t.strftime("%d/%m/%Y")
+	return finalT
 
 app.jinja_env.globals.update(myFunc=myFunc) 
 app.jinja_env.globals.update(myChangeFunc=myChangeFunc) 
