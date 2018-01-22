@@ -7,7 +7,7 @@ import random
 
 def myFunc(pizzaId):
 	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
-	json_val = r.json()['state']
+	json_val = r.json()[0]['state']
 	return(str(json_val))
 
 app.jinja_env.globals.update(myFunc=myFunc) 
