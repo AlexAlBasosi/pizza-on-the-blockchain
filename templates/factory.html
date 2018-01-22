@@ -43,21 +43,17 @@
       <table>
         <thead>
           <tr>
-              <th>Pizza ID</th>
+              <th>Transaction ID</th>
+              <th>New Owner</th>
               <th>Timestamp</th>
-              <th>Date</th>
-              <th>State</th>
-              <th>Owner</th>
           </tr>
         </thead>
         <tbody>
           {% for arr in transactions %}
           <tr>
-            <td>{{ arr['pizzaId'] }}</td>
+            <td>{{ arr['transactionId'] }}</td>
+            <td>{{ arr['newOwner'] }}</td>
             <td>{{ arr['timestamp'] }}</td>
-            <td>{{ arr['date'] }}</td>
-            <td>{{ arr['state'] }}</td>
-            <td>{{ arr['owner'] }}</td>
           </tr>
           {% endfor %}
         </tbody>
