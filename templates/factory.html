@@ -44,6 +44,7 @@
         <thead>
           <tr>
               <th>Transaction ID</th>
+              <th>Current Owner</th>
               <th>New Owner</th>
               <th>Timestamp</th>
           </tr>
@@ -52,6 +53,7 @@
           {% for arr in transactions %}
           <tr>
             <td>{{ arr['transactionId'] }}</td>
+            <td>{{ import requests }} </td>
             <td>{{ arr['newOwner'] }}</td>
             <td>{{ arr['timestamp'] }}</td>
           </tr>
