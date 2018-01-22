@@ -2,25 +2,29 @@
 <html>
   {% include 'header.html' %}
   <body>
-    <h3>Welcome, {{ title }}!</h3>
-
     <div class="transactions">
-      <h4>Transactions</h4>
+      <h4>Pizza Transactions</h4>
       <hr/>
+      <!-- START TABLE -->
       <table>
         <thead>
-          <th>ID</th>
+          <tr>
+              <th>Transaction ID</th>
+              <th>New Owner</th>
+              <th>Timestamp</th>
+          </tr>
         </thead>
-        <tr>
-          <td>Value</td>
-        </tr>
+        <tbody>
+          {% for arr in transactions %}
+          <tr>
+            <td>{{ arr['transactionId'] }}</td>
+            <td>{{ myOwnerFunc(arr['newOwner']) }}</td>
+            <td>{{ myChangeFunc(arr['timestamp']) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
       </table>
-    </div>
-
-    <div class="action">
-      <h4>Actions</h4>
-      <hr/>
-      <a class="waves-effect waves-light btn our-colour">Change Owner</a>
-    </div>
+      <!-- END TABLE -->
+</div>
   </body>
 </html>
