@@ -53,7 +53,7 @@
           {% for arr in transactions %}
           <tr>
             <td>{{ arr['transactionId'] }}</td>
-            <td onload="javascript:alert('sss');"></td>
+            <td>{{ myFunc(arr['pizzaId']) }}</td>
             <td>{{ arr['newOwner'] }}</td>
             <td>{{ arr['timestamp'] }}</td>
           </tr>
