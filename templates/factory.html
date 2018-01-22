@@ -70,6 +70,18 @@
   var h = d.getHours(); // => 9
   var m = d.getMinutes(); // =>  30
   var s = d.getSeconds(); // => 51
+  var dd = d.getDate();
+  var mm = d.getMonth()+1;
+  var yyyy = d.getFullYear();
+  if(dd<10) {
+    dd = '0'+dd
+  } 
+
+  if(mm<10) {
+    mm = '0'+mm
+  }
+  var today = mm + '/' + dd + '/' + yyyy;
   var timeStr = h+":"+m+":"+s
   document.getElementsByName("timestamp")[0].value = timeStr;
+  document.getElementsByName("date")[0].value = today;
 </script>
