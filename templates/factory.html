@@ -61,7 +61,15 @@
         </tbody>
       </table>
       <!-- END TABLE -->
-            
     </div>
   </body>
 </html>
+
+<script>
+  var d = new Date(); // for now
+  var h = d.getHours(); // => 9
+  var m = d.getMinutes(); // =>  30
+  var s = d.getSeconds(); // => 51
+  var timeStr = h+":"+m+":"+s
+  document.GetElementByName("timestamp").value = timeStr;
+</script>
