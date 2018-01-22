@@ -12,5 +12,31 @@
           </form>
         </div>
       <!-- END FORM -->
+          </div>
+    <br> 
+    <div class="transactions">
+      <h4>Pizza Transactions</h4>
+      <hr/>
+      <!-- START TABLE -->
+      <table>
+        <thead>
+          <tr>
+              <th>Transaction ID</th>
+              <th>New Owner</th>
+              <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for arr in transactions %}
+          <tr>
+            <td>{{ arr['transactionId'] }}</td>
+            <td>{{ myOwnerFunc(arr['newOwner']) }}</td>
+            <td>{{ myChangeFunc(arr['timestamp']) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <!-- END TABLE -->
+</div>
   </body>
 </html>
