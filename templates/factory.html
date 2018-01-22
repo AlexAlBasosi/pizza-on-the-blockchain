@@ -54,7 +54,7 @@
           {% for arr in transactions %}
           <tr>
             <td>{{ arr['transactionId'] }}</td>
-            <td>{{ arr['newOwner'] }}</td>
+            <td>{{ myOwnerFunc(arr['newOwner']) }}</td>
             <td>{{ myChangeFunc(arr['timestamp']) }}</td>
           </tr>
           {% endfor %}
