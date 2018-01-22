@@ -7,7 +7,7 @@ import random
 
 def myFunc(pizzaId):
 	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
-	return("The status code of the POST/PUT is: "+ str(r.status_code) + " , " + str(r.text))
+	return(str(r.text))
 
 app.jinja_env.globals.update(myFunc=myFunc) 
 
