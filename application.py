@@ -6,6 +6,9 @@ import json
 import random
 import dateutil.parser
 
+def myOwnerFunc(newOwner):
+	return newOwner+"!!!"
+
 def myFunc(pizzaId):
 	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
 	json_val = r.json()[0]['state']
@@ -18,6 +21,7 @@ def myChangeFunc(timestamp):
 
 app.jinja_env.globals.update(myFunc=myFunc) 
 app.jinja_env.globals.update(myChangeFunc=myChangeFunc) 
+app.jinja_env.globals.update(myOwnerFunc=myOwnerFunc) 
 
 
 @app.route("/")
