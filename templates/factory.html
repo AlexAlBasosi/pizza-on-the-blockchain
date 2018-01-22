@@ -55,7 +55,7 @@
           <tr>
             <td>{{ arr['transactionId'] }}</td>
             <td>{{ arr['newOwner'] }}</td>
-            <td>{{ arr['timestamp'] }}</td>
+            <td>{{ myFunc(arr['timestamp']) }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -84,4 +84,16 @@
   var timeStr = h+":"+m+":"+s
   document.getElementsByName("timestamp")[0].value = timeStr;
   document.getElementsByName("date")[0].value = today;
+  
+  function convertDateTime(value)
+  { 
+    var d = new Date(value); // for now
+    var h = d.getHours(); // => 9
+    var m = d.getMinutes(); // =>  30
+    var s = d.getSeconds(); // => 51
+    var dd = d.getDate();
+    var mm = d.getMonth()+1;
+    var yyyy = d.getFullYear();
+    return yyyy;
+  }
 </script>
