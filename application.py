@@ -8,7 +8,7 @@ import random
 def myFunc(pizzaId):
 	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
 	json_val = r.json()[0]['state']
-	return(str(json_val))
+	return(str(json_val).title())
 
 app.jinja_env.globals.update(myFunc=myFunc) 
 
@@ -55,7 +55,8 @@ def submitPizza():
 			  "pizza": "p1zzA"
 			}
 		rT = requests.post('http://localhost:3000/api/ChangeStateTo'+state_info.title(), data=transactions_val)
-	return("The status code of the POST/PUT is: "+ str(rT.status_code) + " , " + str(rT.text))
+	# return("The status code of the POST/PUT is: "+ str(rT.status_code) + " , " + str(rT.text))
+	return redirect("/factory")
 
 @app.route("/changeOwner/<owner>", methods=['POST','GET'])
 def changeOwner(owner):
@@ -72,7 +73,7 @@ def changeOwner(owner):
 		  "newOwner": str(owner)
 		}
 	rT = requests.post('http://localhost:3000/api/ChangeOwner', data=owner_data)
-	return("The status code of the POST/PUT is: "+ str(r1.status_code) + " , " + str(rT.status_code))
+	return redirect("/"+str(owner))
 
 @app.route("/wholesaler")
 def wholesaler():
