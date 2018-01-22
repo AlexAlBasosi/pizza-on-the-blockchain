@@ -13,7 +13,7 @@ def myFunc(pizzaId):
 
 def myChangeFunc(timestamp):
 	t = dateutil.parser.parse(timestamp)
-	finalT = t.strftime("%d/%m/%Y")
+	finalT = t.strftime("%H:%M:%S %d/%m/%Y")
 	return finalT
 
 app.jinja_env.globals.update(myFunc=myFunc) 
