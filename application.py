@@ -5,15 +5,16 @@ app = Flask(__name__)
 import json 
 import random
 
-#def myFunc(pizzaId):
-#	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
-#	json_val = r.json()[0]['state']
-#	return(str(json_val).title())
+def myFunc(pizzaId):
+	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
+	json_val = r.json()[0]['state']
+	return(str(json_val).title())
 
-def myFunc(timestamp):
+def myChangeFunc(timestamp):
 	return ("Hey",timestamp)
 
 app.jinja_env.globals.update(myFunc=myFunc) 
+app.jinja_env.globals.update(myChangeFunc=myChangeFunc) 
 
 
 @app.route("/")
