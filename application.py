@@ -88,15 +88,18 @@ def changeOwner(owner):
 
 @app.route("/wholesaler")
 def wholesaler():
-	return render_template('wholesaler.html', title="Wholesaler")
+	r = requests.get('http://localhost:3000/api/ChangeOwner') 
+	return render_template('wholesaler.html', title="Wholesaler", transactions=r.json())
 
 @app.route("/retailer")
 def retailer():
-	return render_template('retailer.html', title="Retailer")
+	r = requests.get('http://localhost:3000/api/ChangeOwner')
+	return render_template('retailer.html', title="Retailer", transactions=r.json())
 
 @app.route("/customer")
 def customer():
-	return render_template('customer.html', title="Customer")
+	r = requests.get('http://localhost:3000/api/ChangeOwner')
+	return render_template('customer.html', title="Customer", transactions=r.json())
 
 if __name__ == "__main__":
 	app.run(debug=True)
