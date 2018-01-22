@@ -7,7 +7,7 @@ import random
 import dateutil.parser
 
 def myOwnerFunc(newOwner):
-	return newOwner.split("#")[1]
+	return newOwner.split("#")[1].title()
 
 def myFunc(pizzaId):
 	r = requests.get('http://localhost:3000/api/Pizza') # create a new Pizza (random number)
