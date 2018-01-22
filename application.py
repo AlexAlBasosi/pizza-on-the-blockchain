@@ -12,7 +12,7 @@ def index():
 
 @app.route("/factory")
 def factory():
-	r = requests.get('http://localhost:3000/api/Pizza') 
+	r = requests.get('http://localhost:3000/api/ChangeOwner') 
 	return render_template('factory.html', title="Factory", transactions=r.json())
 
 @app.route("/submitPizza", methods=['POST', 'GET'])
