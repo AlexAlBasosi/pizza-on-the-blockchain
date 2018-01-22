@@ -54,14 +54,14 @@ def changeOwner(owner):
 	# Create the new owner - wholesaler
 	wholesaler_data = {
 	  "$class": "org.acme.howto.Entity",
-	  "entityId": "wholesaler"
+	  "entityId": str(owner)
 	}
 	r1 = requests.post('http://localhost:3000/api/Entity', data=wholesaler_data)
 	# Change Ownership
 	owner_data = {
 		  "$class": "org.acme.howto.ChangeOwner",
 		  "pizza": "p1zzA",
-		  "newOwner": "wholesaler"
+		  "newOwner": str(owner)
 		}
 	rT = requests.post('http://localhost:3000/api/ChangeOwner', data=owner_data)
 	return("The status code of the POST/PUT is: "+ str(r1.status_code) + " , " + str(rT.status_code))
