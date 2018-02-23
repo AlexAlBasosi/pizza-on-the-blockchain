@@ -14,7 +14,7 @@ def myOwnerFunc(newOwner):
 # Helper function to get the current state of the Pizza asset
 def myFunc(pizzaId):
 	r = requests.get('http://localhost:3000/api/Pizza')
-	if r.status_code!=200:
+	if r.json()==None or r.json()=={}:
 		json_val = " "
 	else:
 		json_val = r.json()[0]['state']
