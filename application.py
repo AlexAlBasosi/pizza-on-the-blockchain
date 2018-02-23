@@ -14,6 +14,10 @@ def myOwnerFunc(newOwner):
 # Helper function to get the current state of the Pizza asset
 def myFunc(pizzaId):
 	r = requests.get('http://localhost:3000/api/Pizza')
+	print("Arjun says")
+	print(r)
+	print(r.json())
+	print("Arjun finished")
 	if r.json()==None or r.json()=={}:
 		json_val = " "
 	else:
