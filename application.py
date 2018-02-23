@@ -2,7 +2,9 @@ from flask import Flask, render_template, request, redirect
 import requests
 import json 
 import random
+import os
 import dateutil.parser
+
 app = Flask(__name__)
 
 # Helper function to parse the raw string from the Blockchain
@@ -35,7 +37,10 @@ def index():
 # Route: factory page
 @app.route("/factory")
 def factory():
-	return render_template('factory.html', title="Factory")
+	r = requests.get('http://localhost:3000/api/ChangeOwner') 
+	if r.json()==None or r.json()=={}:
+		transactions = {}
+	return render_template('factory.html', title="Factory", transactions=transactions)
 
 # Route: submitPizza transaction
 @app.route("/submitPizza", methods=['POST', 'GET'])
@@ -118,6 +123,9 @@ def customer():
 	r = requests.get('http://localhost:3000/api/ChangeOwner')
 	return render_template('customer.html', title="Customer", transactions=r.json())
 
+# When running this app on the local machine, default the port to 5000
+port = int(os.getenv('PORT', 5000))
+
 # Entry point to the program
 if __name__ == "__main__":
-	app.run(debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
