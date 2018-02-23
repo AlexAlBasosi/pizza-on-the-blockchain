@@ -18,10 +18,10 @@ def myFunc(pizzaId):
 	print(r)
 	print(r.json())
 	print("Arjun finished")
-	if r.json()==None or r.json()=={}:
-		json_val = " "
-	else:
+	try:
 		json_val = r.json()[0]['state']
+	except:
+		json_val = " "
 	return(str(json_val).title())
 
 # Helper function to parse a raw timestamp to a desired format of "H:M:S dd/mm/yyy"
