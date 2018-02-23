@@ -40,6 +40,8 @@ def factory():
 	r = requests.get('http://localhost:3000/api/ChangeOwner') 
 	if r.json()==None or r.json()=={}:
 		transactions = {}
+	else:
+		transactions = r.json()
 	return render_template('factory.html', title="Factory", transactions=transactions)
 
 # Route: submitPizza transaction
@@ -107,7 +109,11 @@ def changeOwner(owner):
 def wholesaler():
 	# GET Request 1: Get ChangeOwner transaction data
 	r = requests.get('http://localhost:3000/api/ChangeOwner') 
-	return render_template('wholesaler.html', title="Wholesaler", transactions=r.json())
+	if r.json()==None or r.json()=={}:
+		transactions = {}
+	else:
+		transactions = r.json()
+	return render_template('wholesaler.html', title="Wholesaler", transactions=transactions)
 
 # Route: retailer page
 @app.route("/retailer")
@@ -123,7 +129,7 @@ def customer():
 	r = requests.get('http://localhost:3000/api/ChangeOwner')
 	return render_template('customer.html', title="Customer", transactions=r.json())
 
-# When running this app on the local machine, default the port to 5000
+# When running this app on the local machine, default the port to 8000
 port = int(os.getenv('PORT', 5000))
 
 # Entry point to the program
