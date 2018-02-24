@@ -293,7 +293,7 @@ After the runtime has been installed, a business network can be deployed to the 
 
 A ```PeerAdmin``` business network card with the correct credentials is already created as part of development environment installation.
 
-#### Deploying the business network
+#### Deploying the Business Network
 
 Deploying a business network to the Hyperledger Fabric requires the Hyperledger Composer chaincode to be installed on the peer, then the business network archive (.bna) must be sent to the peer, and a new participant, identity, and associated card must be created to be the network administrator. Finally, the network administrator business network card must be imported for use, and the network can then be pinged to check it is responding.
 
@@ -323,6 +323,23 @@ The ```composer network ping``` command requires a business network card to iden
 
 #### Generating a REST Server
 
+Hyperledger Composer can generate a bespoke REST API based on a business network. For developing a web application, the REST API provides a useful layer of language-neutral abstraction.
+
+1. To create the REST API, navigate to the ```pizza-on-the-blockchain``` directory and run the following command:
+
+```composer-rest-server```
+
+2. Enter ```admin@pizza-on-the-blockchain``` as the card name.
+
+3. Select <strong>never use namespaces</strong> when asked whether to use namespaces in the generated API.
+
+4. Select <strong>No</strong> when asked whether to secure the generated API.
+
+5. Select <strong>Yes</strong> when asked whether to enable event publication.
+
+6. Select <strong>No</strong> when asked whether to enable TLS security.
+
+The generated API is connected to the deployed blockchain and business network.
 
 ### Purpose
 This is a Python Flask web application built as an interface for the Blockchain network running on Hyperledger Fabric. The application utilises REST APIs (generated using the [Composer REST Server](https://hyperledger.github.io/composer/reference/rest-server.html)) to connect to the Blockchain network and perform GET, POST and PUT requests. 
