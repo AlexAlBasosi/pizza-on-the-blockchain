@@ -37,9 +37,17 @@ We will create multiple instances of type Entity (i.e. Factory).
 
 <img src="/images/participant.png"></img>
 
-Here we define the transactions that will take place on the Blockchain, such as changing the state of the owner and which entity owns the pizza.
+Here we define the transactions that will take place on the Blockchain, such as changing the state of the pizza and which entity owns the pizza.
 
+Select "Script File" in the left pane. From here, you will define the transaction processor functions, these are the functions that will execute when the transactions are invoked.
 <img src="/images/transactions.png"></img>
+
+The ChangeStateToProduction function will change the state of the current pizza to Production.
+<img src="/images/state.png"></img>
+
+The same applies with the other three states.
+The ChangeOwner function will change the owner of the pizza to a new owner.
+<img src="/images/owner.png"></img>
 
 
 
