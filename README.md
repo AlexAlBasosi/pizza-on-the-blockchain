@@ -80,9 +80,9 @@ That's it! You're ready to deploy your business network to the Hypelerledger Fab
 ### For Windows Users
 The Hyperledger Fabric environment can only be set up on Unix environments, so for windows users, you have to install a virtual machine and set up the environment as such. For the purposes of this demo, we're going to be setting up a Ubuntu OS on VirtualBox.
 
-Download Ubuntu: [Ubuntu](https://www.ubuntu.com/download/desktop)
-Download VirtulBox [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-Instructions for setting up Ubuntu on VirtualBox [Ubuntu on VirtualBox](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox)
+Download Ubuntu: [Ubuntu](https://www.ubuntu.com/download/desktop) <br/>
+Download VirtulBox [VirtualBox](https://www.virtualbox.org/wiki/Downloads)<br/>
+Instructions for setting up Ubuntu on VirtualBox [Ubuntu on VirtualBox](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox) <br/>
 
 ## For Mac Users
 
