@@ -406,7 +406,7 @@ And that's it! See how simple it is? If you're interested in learning more about
 
 <a href="https://www.ibm.com/blockchain/what-is-blockchain.html">https://www.ibm.com/blockchain/what-is-blockchain.html</a>
 
-<a href="https://hyperledger.github.io/composer/">Hyperledger Composer</a>
+<a href="https://hyperledger.github.io/composer/">https://hyperledger.github.io/composer/</a>
 
 
 
