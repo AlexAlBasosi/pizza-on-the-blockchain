@@ -26,6 +26,15 @@ Select "Deploy"
 <img src="/images/connect.png"></img>
 Select "Connect Now"
 
+You should be presented with the following screen:
+<img src="/images/screen.png"></img>
+
+Click on the "Model File" in the left pane. From this section you can model your business network. In our example, we are tracking the shipment of Frozen Pizzas from the Factory, to the Wholesaler, to the Retailer, down to the Customer. We're assuming each Entity (i.e. Factory), will make use of RFID tags to store information on the pizza, and will scan that tag as it's received. This information, such as timestamp, the date, and state (production, freezing, packaging, distribution) is stored in the Blockchain.
+
+<img src="/images/pizza.png"></img>
+
+
+
 
 ## For Windows Users
 
