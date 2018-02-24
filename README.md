@@ -13,10 +13,10 @@ Hyperledger Fabric is a platform for distributed ledger solutions, underpinned b
 Hyperledger Composer is a set of collaboration tools for building blockchain business networks that make it simple and fast for business owners and developers to create smart contracts and blockchain applications to solve business problems.
 
 ### The Business Network
-Head over to the Composer Playground: [Composer Playground](http://composer-playground.mybluemix.net/)
+* Head over to the Composer Playground: [Composer Playground](http://composer-playground.mybluemix.net/)
 <img src="/images/playground.png"></img>
 
-Select "Deploy a Business Network"
+* Select "Deploy a Business Network"
 
 Under the "Model Network Starter Template", select "browse", and choose the pizza-on-the-blockchain@0.0.1.bna file from this repository.
 
