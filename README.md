@@ -402,6 +402,12 @@ Select ```Transfer Ownership``` one more time.
 
 From here, the Customer can keep track of their pizza through the entire process.
 
+And that's it! See how simple it is? If you're interested in learning more about Blockchain, check out some useful links: 
+
+<a href="https://www.ibm.com/blockchain/what-is-blockchain.html">https://www.ibm.com/blockchain/what-is-blockchain.html</a>
+
+<a href="https://hyperledger.github.io/composer/">Hyperledger Composer</a>
+
 
 
 
