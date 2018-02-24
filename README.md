@@ -64,6 +64,7 @@ Select "Create New". You should see a new entity being created. In the left Pane
 You should see a new Pizza asset being created.
 
 Select "Submit Transaction" on the bottom left. For the Transaction Type, select the "ChangeStateToFreezing" transaction, and for the "pizza" field, pass in the ID you just created when creating your pizza asset.
+<img src="submittransaction.png"></img>
 
 Select "Submit"
 
