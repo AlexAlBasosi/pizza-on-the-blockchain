@@ -118,6 +118,8 @@ Next run the script - as this briefly uses sudo during its execution, you will b
 
 ``` ./prereqs-ubuntu.sh ```
 
+<br/>
+
 ## For Mac Users
 
 Follow these instructions to install the pre-requsities for installing Hyperledger Composer on a local Mac OS X machine. You need to install these tools before you attempt to install Hyperledger Composer.
@@ -187,6 +189,8 @@ Type ```composer``` into the search bar and then press the ```Install``` button 
 ## Installing the Development Environment
 
 Follow these instructions to obtain the Hyperledger Composer development tools (primarily used to create Business Networks) and stand up a Hyperledger Fabric (primarily used to run/deploy your Business Networks locally). Note that the Business Networks you create can also be deployed to Hyperledger Fabric runtimes in other environments e.g. on a cloud platform.
+
+<br/> <br/> <br/>
 
 ### Installing Components
 
