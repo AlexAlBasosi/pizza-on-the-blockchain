@@ -192,6 +192,22 @@ Follow these instructions to obtain the Hyperledger Composer development tools (
 
 There are a few useful CLI tools for Composer developers. The most important one is ```composer-cli```, which contains all the essential operations, so we'll install that first. Next, we'll also pick up ```generator-hyperledger-composer```, ```composer-rest-server``` and ```Yeoman``` plus the ```generator-hyperledger-composer```. Those last 3 are not core parts of the development environment, but they'll be useful if you're following the tutorials or developing applications that interact with your Business Network, so we'll get them installed now.
 
+1. Essential CLI tools:
+
+```npm install -g composer-cli```
+
+2. Utility for running a REST Server on your machine to expose your business networks as RESTful APIs:
+
+```npm install -g composer-rest-server```
+
+3. Useful utility for generating application assets:
+
+```npm install -g generator-hyperledger-composer```
+
+4. Yeoman is a tool for generating applications, which utilises generator-hyperledger-composer:
+
+```npm install -g yo```
+
 ### Purpose
 This is a Python Flask web application built as an interface for the Blockchain network running on Hyperledger Fabric. The application utilises REST APIs (generated using the [Composer REST Server](https://hyperledger.github.io/composer/reference/rest-server.html)) to connect to the Blockchain network and perform GET, POST and PUT requests. 
 
