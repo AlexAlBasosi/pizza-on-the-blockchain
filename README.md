@@ -18,18 +18,18 @@ Hyperledger Composer is a set of collaboration tools for building blockchain bus
 
 * Select "Deploy a Business Network"
 
-Under the "Model Network Starter Template", select "browse", and choose the pizza-on-the-blockchain@0.0.1.bna file from this repository.
+* Under the "Model Network Starter Template", select "browse", and choose the pizza-on-the-blockchain@0.0.1.bna file from this repository.
 
 <img src="/images/result.png"></img>
-Select "Deploy"
+* Select "Deploy"
 
 <img src="/images/connect.png"></img>
-Select "Connect Now"
+* Select "Connect Now"
 
 You should be presented with the following screen:
 <img src="/images/screen.png"></img>
 
-Click on the "Model File" in the left pane. From this section you can model your business network. In our example, we are tracking the shipment of Frozen Pizzas from the Factory, to the Wholesaler, to the Retailer, down to the Customer. We're assuming each Entity (i.e. Factory), will make use of RFID tags to store information on the pizza, and will scan that tag as it's received. This information, such as timestamp, the date, and state (production, freezing, packaging, distribution) is stored on the Blockchain.
+* Click on the "Model File" in the left pane. From this section you can model your business network. In our example, we are tracking the shipment of Frozen Pizzas from the Factory, to the Wholesaler, to the Retailer, down to the Customer. We're assuming each Entity (i.e. Factory), will make use of RFID tags to store information on the pizza, and will scan that tag as it's received. This information, such as timestamp, the date, and state (production, freezing, packaging, distribution) is stored on the Blockchain.
 
 <img src="/images/pizza.png"></img>
 
@@ -40,7 +40,7 @@ We will create multiple instances of type Entity (i.e. Factory).
 Here we define the transactions that will take place on the Blockchain, such as changing the state of the pizza and which entity owns the pizza.
 <img src="/images/transactions.png"></img>
 
-Select "Script File" in the left pane. From here, you will define the transaction processor functions, these are the functions that will execute when the transactions are invoked.
+* Select "Script File" in the left pane. From here, you will define the transaction processor functions, these are the functions that will execute when the transactions are invoked.
 
 The ChangeStateToProduction function will change the state of the current pizza to Production.
 <img src="/images/state.png"></img>
@@ -49,29 +49,29 @@ The same applies with the other three states. <br/>
 The ChangeOwner function will change the owner of the pizza to a new owner.
 <img src="/images/owner.png"></img>
 
-Select "Access Control" from the left pane. From here, you can determine which participants of the business network have access to which assets and transactions.
+* Select "Access Control" from the left pane. From here, you can determine which participants of the business network have access to which assets and transactions.
 <img src="/images/access.png"></img>
 
-On the Top Pane, select "Test". 
+* On the Top Pane, select "Test". 
 <img src="/images/test.png"></img>
 
-From here, you can test out the transactions that you defined in the model file. On the top left, select "+ Create New Participant, and enter a unique identifier for the entity.
+* From here, you can test out the transactions that you defined in the model file. On the top left, select "+ Create New Participant, and enter a unique identifier for the entity.
 <img src="/images/entity.png"></img>
 
-Select "Create New". You should see a new entity being created. In the left Pane, under Assets, select Pizza. Select "+ Create New Asset." Fill in the details for the Pizza, and select "Create New". (For the state, select from "production", "freezing", "packaging", and "distribution). For the Owner field, select the ID of the entity you just created.
+* Select "Create New". You should see a new entity being created. In the left Pane, under Assets, select Pizza. Select "+ Create New Asset." Fill in the details for the Pizza, and select "Create New". (For the state, select from "production", "freezing", "packaging", and "distribution). For the Owner field, select the ID of the entity you just created.
 <img src="/images/pizzaasset.png"></img>
 
 You should see a new Pizza asset being created.
 
-Select "Submit Transaction" on the bottom left. For the Transaction Type, select the "ChangeStateToFreezing" transaction, and for the "pizza" field, pass in the ID you just created when creating your pizza asset.
+* Select "Submit Transaction" on the bottom left. For the Transaction Type, select the "ChangeStateToFreezing" transaction, and for the "pizza" field, pass in the ID you just created when creating your pizza asset.
 <img src="/images/submittransaction.png"></img>
 
-Select "Submit"
+* Select "Submit"
 
 You should see a notification pop up saying "Submit Transaction Successful". You can double-check by selecting "All Transactions" in the left pane, under Transactions. 
 <img src="/images/alltransactions.png"></img>
 
-In the ChangeStateToFreezing transactions, select "view record", and you can see all the transaction related information.
+* In the ChangeStateToFreezing transactions, select "view record", and you can see all the transaction related information.
 
 That's it! You're ready to deploy your business network to the Hypelerledger Fabric.
 
