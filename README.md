@@ -170,7 +170,7 @@ Check that Node is installed:
 
 ``` node --version ```
 
-## Intall Docker
+### Install Docker
 
 Follow the instructions here to install Docker for Max (stable): [Install Docker](https://docs.docker.com/docker-for-mac/install/)
 
