@@ -45,10 +45,33 @@ Select "Script File" in the left pane. From here, you will define the transactio
 The ChangeStateToProduction function will change the state of the current pizza to Production.
 <img src="/images/state.png"></img>
 
-The same applies with the other three states.
+The same applies with the other three states. <br/>
 The ChangeOwner function will change the owner of the pizza to a new owner.
 <img src="/images/owner.png"></img>
 
+Select "Access Control" from the left pane. From here, you can determine which participants of the business network have access to which assets and transactions.
+<img src="/images/access.png"></img>
+
+On the Top Pane, select "Test". 
+<img src="/images/test.png"></img>
+
+From here, you can test out the transactions that you defined in the model file. On the top left, select "+ Create New Participant, and enter a unique identifier for the entity.
+<img src="/images/entity.png"></img>
+
+Select "Create New". You should see a new entity being created. In the left Pane, under Assets, select Pizza. Select "+ Create New Asset." Fill in the details for the Pizza, and select "Create New". (For the state, select from "production", "freezing", "packaging", and "distribution). For the Owner field, select the ID of the entity you just created.
+
+You should see a new Pizza asset being created.
+
+Select "Submit Transaction" on the bottom left. For the Transaction Type, select the "ChangeStateToFreezing" transaction, and for the "pizza" field, pass in the ID you just created when creating your pizza asset.
+
+Select "Submit"
+
+You should see a notification pop up saying "Submit Transaction Successful". You can double-check by selecting "All Transactions" in the left pane, under Transactions. 
+<img src="/images/alltransactions.png"></img>
+
+In the ChangeStateToFreezing transactions, select "view record", and you can see all the transaction related information.
+
+That's it! You're ready to deploy your business network to the Hypelerledger Fabric.
 
 
 ## For Windows Users
