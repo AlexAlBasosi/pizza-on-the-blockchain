@@ -185,14 +185,14 @@ Press the “Download for Mac” button and copy the downloaded application into
 ### Install the Hyperledger Composer Extension for VSCode
 Type ```composer``` into the search bar and then press the ```Install``` button next to the Hyperleger Composer extension. Once the install completes you need to press the ```Reload``` button to activate the extension.
 
+<br/><br/><br/>
+
 
 ## Installing the Development Environment
 
 Follow these instructions to obtain the Hyperledger Composer development tools (primarily used to create Business Networks) and stand up a Hyperledger Fabric (primarily used to run/deploy your Business Networks locally). Note that the Business Networks you create can also be deployed to Hyperledger Fabric runtimes in other environments e.g. on a cloud platform.
 
-<br/> <br/> <br/>
-
-## Installing Components
+### Installing Components
 
 ### Step 1: Install the CLI Tools
 
