@@ -21,6 +21,11 @@ Select "Deploy a Business Network"
 Under the "Model Network Starter Template", select "browse", and choose the pizza-on-the-blockchain@0.0.1.bna file from this repository.
 
 <img src="/images/result.png"></img>
+Select "Deploy"
+
+<img src="/images/connect.png"></img>
+Select "Connect Now"
+
 
 ## For Windows Users
 
