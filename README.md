@@ -249,7 +249,7 @@ Start the fabric:
 
 Generate a PeerAdmin card:
 
-```./createPeerAdmin```
+```./createPeerAdmin.sh```
 
 You can start and stop your runtime using ```~/fabric-tools/stopFabric.sh```, and start it again with ```~/fabric-tools/startFabric.sh```.
 
