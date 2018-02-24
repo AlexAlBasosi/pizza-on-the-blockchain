@@ -89,14 +89,14 @@ To run Hyperledger Composer and Hyperledger Fabric, we recommend you have at lea
 
 The following are prerequisites for installing the required development tools:
 
-    * Operating Systems: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit), or Mac OS 10.12
-    * Docker Engine: Version 17.03 or higher
-    * Docker-Compose: Version 1.8 or higher
-    * Node: 8.9 or higher (note version 9 is not supported)
-    * npm: v5.x
-    * git: 2.9.x or higher
-    * Python: 2.7.x
-    * A code editor of your choice, we recommend VSCode.
+    Operating Systems: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit), or Mac OS 10.12
+     Docker Engine: Version 17.03 or higher
+     Docker-Compose: Version 1.8 or higher
+     Node: 8.9 or higher (note version 9 is not supported)
+     npm: v5.x
+     git: 2.9.x or higher
+     Python: 2.7.x
+     A code editor of your choice, we recommend VSCode.
 
 If installing Hyperledger Composer using Linux, be aware of the following advice:
 
@@ -109,6 +109,12 @@ If installing Hyperledger Composer using Linux, be aware of the following advice
 
 If you're running on Ubuntu, you can download the prerequisites using the following commands:
 
+``` curl -O https://hyperledger.github.io/composer/prereqs-ubuntu.sh ```
+``` chmod u+x prereqs-ubuntu.sh ```
+
+Next run the script - as this briefly uses sudo during its execution, you will be prompted for your password.
+
+``` ./prereqs-ubuntu.sh ```
 
 ## For Mac Users
 
