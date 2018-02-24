@@ -255,6 +255,8 @@ You can start and stop your runtime using ```~/fabric-tools/stopFabric.sh```, an
 
 At the end of your development session, you run ```~/fabric-tools/stopFabric.sh``` and then ```~/fabric-tools/teardownFabric.sh```. Note that if you've run the teardown script, the next time you start the runtime, you'll need to create a new PeerAdmin card just like you did on first time startup.
 
+<br/><br/><br/>
+
 ## Deploying the Business Network to Hyperledger Fabric
 
 ### Creating the .bna file
