@@ -192,9 +192,9 @@ Follow these instructions to obtain the Hyperledger Composer development tools (
 
 <br/> <br/> <br/>
 
-### Installing Components
+## Installing Components
 
-#### Step 1: Install the CLI Tools
+### Step 1: Install the CLI Tools
 
 There are a few useful CLI tools for Composer developers. The most important one is ```composer-cli```, which contains all the essential operations, so we'll install that first. Next, we'll also pick up ```generator-hyperledger-composer```, ```composer-rest-server``` and ```Yeoman``` plus the ```generator-hyperledger-composer```. Those last 3 are not core parts of the development environment, but they'll be useful if you're following the tutorials or developing applications that interact with your Business Network, so we'll get them installed now.
 
@@ -214,7 +214,7 @@ There are a few useful CLI tools for Composer developers. The most important one
 
 ```npm install -g yo```
 
-#### Install Playground
+### Install Playground
 
 If you've already tried Composer online, you'll have seen the browser app "Playground". You can run this locally on your development machine too, giving you a UI for viewing and demonstrating your business networks.
 
@@ -222,7 +222,7 @@ Browser app for simple editing and testing Business Networks:
 
 ```npm install -g composer-playground```
 
-#### Install Hyperledger Fabric
+### Install Hyperledger Fabric
 
 This step gives you a local Hyperledger Fabric runtime to deploy your business networks to.
 
@@ -241,7 +241,7 @@ A ```tar.gz``` is also available if you prefer: just replace the ```.zip``` file
 ```cd ~/fabric-tools```
 ```./downloadFabric.sh```
 
-#### Start Hyperledger Fabric
+### Start Hyperledger Fabric
 
 Start the fabric:
 
