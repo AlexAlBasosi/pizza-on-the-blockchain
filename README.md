@@ -75,8 +75,11 @@ In the ChangeStateToFreezing transactions, select "view record", and you can see
 
 That's it! You're ready to deploy your business network to the Hypelerledger Fabric.
 
+## Setting up the Environment
 
-## For Windows Users
+### For Windows Users
+* test
+* further test
 
 ## For Mac Users
 
