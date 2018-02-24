@@ -351,6 +351,8 @@ It should look a little like this:
 
 <img src="/images/rest.png"></img>
 
+<br/><br/><br/>
+
 ## Running the Application
 
 ### Purpose
