@@ -1,7 +1,11 @@
 # Pizza! on the Blockchain 
 
 ## Develop an end-to-end Blockchain application
-Test
+
+## What is Hyperledger Fabric?
+Hyperledger Fabric is a platform for distributed ledger solutions, underpinned by a modular architecture delivering high degrees of confidentiality, resiliency, flexibility and scalability. It is designed to support pluggable implementations of different components, and accommodate the complexity and intricacies that exist across the economic ecosystem.
+
+![hyperledger_logo_new][images/hyperledger_logo_new.png]
 
 ### Purpose
 This is a Python Flask web application built as an interface for the Blockchain network running on Hyperledger Fabric. The application utilises REST APIs (generated using the [Composer REST Server](https://hyperledger.github.io/composer/reference/rest-server.html)) to connect to the Blockchain network and perform GET, POST and PUT requests. 
