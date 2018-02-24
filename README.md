@@ -75,6 +75,8 @@ You should see a notification pop up saying "Submit Transaction Successful". You
 
 That's it! You're ready to deploy your business network to the Hypelerledger Fabric.
 
+<br/><br/><br/>
+
 ## Setting up the Environment
 
 ### For Windows/Linux Users
