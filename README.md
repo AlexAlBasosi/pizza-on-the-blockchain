@@ -1,6 +1,6 @@
 # Pizza! on the Blockchain 
 
-##Develop an end-to-end Blockchain application
+## Develop an end-to-end Blockchain application
 Test
 
 ### Purpose
