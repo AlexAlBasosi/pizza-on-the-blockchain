@@ -371,3 +371,22 @@ Please feel free to [contact me](mailto:Arjun.Nedungadi1@ibm.com) with any quest
 Once you start up the application, you should be able to see this page: 
 
 <img src="/images/app.png"></img>
+
+Browse to the Factory page, and select ```Production``` as the Pizza state. Press Submit.
+
+<img src="/images/production.png"></img>
+
+You can see the Current Status has changed to production. Now, when filling the form, select ```Freezing```. Press Submit.
+
+<img src="/images/freezing.png"></img>
+
+Now, try ```Packaging```.
+
+<img src="/images/packaging.png"></img>
+
+Finally, select ```Distribution```.
+
+<img src="/images/distribution.png"></img>
+
+
+
