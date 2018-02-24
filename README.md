@@ -12,10 +12,8 @@ Hyperledger Fabric is a platform for distributed ledger solutions, underpinned b
 ## What is Hyperledger Composer
 Hyperledger Composer is a set of collaboration tools for building blockchain business networks that make it simple and fast for business owners and developers to create smart contracts and blockchain applications to solve business problems.
 
-<br/>
-<img src="images/composer.png"></img>
-<br/>
-
+### The Business Network
+Head over to the Composer Playground: [Composer Playground](http://composer-playground.mybluemix.net/)
 
 ## For Windows Users
 
