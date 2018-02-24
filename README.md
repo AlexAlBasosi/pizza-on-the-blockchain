@@ -59,6 +59,7 @@ From here, you can test out the transactions that you defined in the model file.
 <img src="/images/entity.png"></img>
 
 Select "Create New". You should see a new entity being created. In the left Pane, under Assets, select Pizza. Select "+ Create New Asset." Fill in the details for the Pizza, and select "Create New". (For the state, select from "production", "freezing", "packaging", and "distribution). For the Owner field, select the ID of the entity you just created.
+<img src="/images/pizzaasset.png"></img>
 
 You should see a new Pizza asset being created.
 
