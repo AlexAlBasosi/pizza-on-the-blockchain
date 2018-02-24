@@ -208,6 +208,48 @@ There are a few useful CLI tools for Composer developers. The most important one
 
 ```npm install -g yo```
 
+#### Install Playground
+
+If you've already tried Composer online, you'll have seen the browser app "Playground". You can run this locally on your development machine too, giving you a UI for viewing and demonstrating your business networks.
+
+Browser app for simple editing and testing Business Networks:
+
+```npm install -g composer-playground```
+
+#### Install Hyperledger Fabric
+
+This step gives you a local Hyperledger Fabric runtime to deploy your business networks to.
+
+1. In a directory of your choice (we will assume ~/fabric-tools), get the .zip file that contains the tools to install Hyperledger Fabric:
+
+```mkdir ~/fabric-tools && cd ~/fabric-tools```
+
+```curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.zip```
+
+```unzip fabric-dev-servers.zip```
+
+A ```tar.gz``` is also available if you prefer: just replace the ```.zip``` file with ```fabric-dev-servers.tar.gz1``` and the ```unzip``` command with a ```tar xvzf``` command in the above snippet.
+
+2. Use the scripts you just downloaded and extracted to download a local Hyperledger Fabric runtime:
+
+```cd ~/fabric-tools```
+```./downloadFabric.sh```
+
+#### Start Hyperledger Fabric
+
+Start the fabric:
+
+```./startFabric.sh```
+
+Generate a PeerAdmin card:
+
+```./createPeerAdmin```
+
+You can start and stop your runtime using ```~/fabric-tools/stopFabric.sh```, and start it again with ```~/fabric-tools/startFabric.sh```.
+
+At the end of your development session, you run ```~/fabric-tools/stopFabric.sh``` and then ```~/fabric-tools/teardownFabric.sh```. Note that if you've run the teardown script, the next time you start the runtime, you'll need to create a new PeerAdmin card just like you did on first time startup.
+
+
 ### Purpose
 This is a Python Flask web application built as an interface for the Blockchain network running on Hyperledger Fabric. The application utilises REST APIs (generated using the [Composer REST Server](https://hyperledger.github.io/composer/reference/rest-server.html)) to connect to the Blockchain network and perform GET, POST and PUT requests. 
 
