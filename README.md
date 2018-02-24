@@ -118,6 +118,73 @@ Next run the script - as this briefly uses sudo during its execution, you will b
 
 ## For Mac Users
 
+Follow these instructions to install the pre-requsities for installing Hyperledger Composer on a local Mac OS X machine. You need to install these tools before you attempt to install Hyperledger Composer.
+
+### Install nvm and Apple Xcode
+
+First install nvm (the Node version manager). nvm is a tool that allows you to easily install, update and switch between versions of Node.js.
+
+Open the terminal (command line) by clicking on the magnifier in the menu bar at the top right of your screen. Type terminal and press enter.
+
+In the terminal window paste the text below and press enter:
+
+``` curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash ```
+
+When you hit enter you should see the pop-up below, prompting you to install git. Press the Get Xcode button to install the full Apple Xcode IDE, including a C++ compiler, used to install native Node.js modules.
+
+The download and install process for Xcode may take 20 minutes or more. Be patient!
+
+After the installation of Xcode has completed launch Xcode. Accept the license agreement. It will prompt you for your username and password and will install additional components.
+
+After Xcode finishes installing additional components and launches, simply quit Xcode.
+
+Switch back to the terminal and create your bash profile (stores user preferences for bash):
+
+``` touch .bash_profile ```
+
+Then rerun the original curl command:
+
+``` curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash ```
+
+Close the terminal and reopen it.
+
+Check that nvm is installed and is accessible:
+
+``` nvm —-version ```
+
+### Install Node
+
+Install the latest (long term support) version of Node:
+
+``` nvm install --lts ```
+
+Switch to the LTS version of Node:
+
+``` nvm use --lts ```
+
+Check that Node is installed:
+
+``` node --version ```
+
+## Intall Docker
+
+Follow the instructions here to install Docker for Max (stable): [Docker](https://docs.docker.com/docker-for-mac/install/)
+
+After running the installed Docker application you should have the whale icon in your menu bar, with a green “Docker is running” status.
+
+### Install VSCode
+
+Install VSCode by visiting: [VSCode](https://code.visualstudio.com/)
+
+Press the “Download for Mac” button and copy the downloaded application into your Applications folder.
+
+### Install the Hyperledger Composer Extension for VSCode
+Type ```composer``` into the search bar and then press the ```Install``` button next to the Hyperleger Composer extension. Once the install completes you need to press the ```Reload``` button to activate the extension.
+
+
+## Installing the Development Environment
+
+Follow these instructions to obtain the Hyperledger Composer development tools (primarily used to create Business Networks) and stand up a Hyperledger Fabric (primarily used to run/deploy your Business Networks locally). Note that the Business Networks you create can also be deployed to Hyperledger Fabric runtimes in other environments e.g. on a cloud platform.
 
 ### Purpose
 This is a Python Flask web application built as an interface for the Blockchain network running on Hyperledger Fabric. The application utilises REST APIs (generated using the [Composer REST Server](https://hyperledger.github.io/composer/reference/rest-server.html)) to connect to the Blockchain network and perform GET, POST and PUT requests. 
