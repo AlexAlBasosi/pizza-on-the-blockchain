@@ -80,9 +80,9 @@ That's it! You're ready to deploy your business network to the Hypelerledger Fab
 ### For Windows/Linux Users
 The Hyperledger Fabric environment can only be set up on Unix environments, so for windows users, you have to install a virtual machine and set up the environment as such. For the purposes of this demo, we're going to be setting up a Ubuntu OS on VirtualBox.
 
-Download Ubuntu: [Ubuntu](https://www.ubuntu.com/download/desktop) <br/>
-Download VirtualBox [VirtualBox](https://www.virtualbox.org/wiki/Downloads)<br/>
-Instructions for setting up Ubuntu on VirtualBox [Ubuntu on VirtualBox](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox) <br/>
+Download Ubuntu: [Install Ubuntu](https://www.ubuntu.com/download/desktop) <br/>
+Download VirtualBox [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)<br/>
+Instructions for setting up Ubuntu on VirtualBox [Set Up Ubuntu on VirtualBox](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox) <br/>
 
 #### Installing Pre-Requisites
 To run Hyperledger Composer and Hyperledger Fabric, we recommend you have at least 4Gb of memory.
@@ -168,13 +168,13 @@ Check that Node is installed:
 
 ## Intall Docker
 
-Follow the instructions here to install Docker for Max (stable): [Docker](https://docs.docker.com/docker-for-mac/install/)
+Follow the instructions here to install Docker for Max (stable): [Install Docker](https://docs.docker.com/docker-for-mac/install/)
 
 After running the installed Docker application you should have the whale icon in your menu bar, with a green “Docker is running” status.
 
 ### Install VSCode
 
-Install VSCode by visiting: [VSCode](https://code.visualstudio.com/)
+Install VSCode by visiting: [Install VSCode](https://code.visualstudio.com/)
 
 Press the “Download for Mac” button and copy the downloaded application into your Applications folder.
 
@@ -185,6 +185,12 @@ Type ```composer``` into the search bar and then press the ```Install``` button 
 ## Installing the Development Environment
 
 Follow these instructions to obtain the Hyperledger Composer development tools (primarily used to create Business Networks) and stand up a Hyperledger Fabric (primarily used to run/deploy your Business Networks locally). Note that the Business Networks you create can also be deployed to Hyperledger Fabric runtimes in other environments e.g. on a cloud platform.
+
+### Installing Components
+
+#### Step 1: Install the CLI Tools
+
+There are a few useful CLI tools for Composer developers. The most important one is ```composer-cli```, which contains all the essential operations, so we'll install that first. Next, we'll also pick up ```generator-hyperledger-composer```, ```composer-rest-server``` and ```Yeoman``` plus the ```generator-hyperledger-composer```. Those last 3 are not core parts of the development environment, but they'll be useful if you're following the tutorials or developing applications that interact with your Business Network, so we'll get them installed now.
 
 ### Purpose
 This is a Python Flask web application built as an interface for the Blockchain network running on Hyperledger Fabric. The application utilises REST APIs (generated using the [Composer REST Server](https://hyperledger.github.io/composer/reference/rest-server.html)) to connect to the Blockchain network and perform GET, POST and PUT requests. 
