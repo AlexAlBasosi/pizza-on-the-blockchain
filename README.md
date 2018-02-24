@@ -388,5 +388,22 @@ Finally, select ```Distribution```.
 
 <img src="/images/distribution.png"></img>
 
+Now, select ```Transfer Ownership```, to transfer the ownership of the pizza to the Wholesaler. This will automatically take you to the Wholesaler page, and you can see the transaction issued onto the Blockchain.
+
+<img src="/images/wholesaler.png"></img>
+
+Select ```Transfer Ownership``` again.
+
+<img src="/images/retailer.png"></img>
+
+Select ```Transfer Ownership``` one more time.
+
+<img src="/images/customer.png"></img>
+
+From here, the Customer can keep track of their pizza through the entire process.
+
+
+
+
 
 
