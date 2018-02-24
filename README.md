@@ -341,6 +341,12 @@ Hyperledger Composer can generate a bespoke REST API based on a business network
 
 The generated API is connected to the deployed blockchain and business network.
 
+Once the REST server is up and running, head over to <a href="https://localhost:3000/explorer">https://localhost:3000/explorer</a>
+
+It should look a little like this:
+
+<img src="/images/rest.png"></img>
+
 ### Purpose
 This is a Python Flask web application built as an interface for the Blockchain network running on Hyperledger Fabric. The application utilises REST APIs (generated using the [Composer REST Server](https://hyperledger.github.io/composer/reference/rest-server.html)) to connect to the Blockchain network and perform GET, POST and PUT requests. 
 
