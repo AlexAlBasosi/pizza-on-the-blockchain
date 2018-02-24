@@ -14,6 +14,11 @@ Hyperledger Composer is a set of collaboration tools for building blockchain bus
 
 ### The Business Network
 Head over to the Composer Playground: [Composer Playground](http://composer-playground.mybluemix.net/)
+<img src="/images/playground.png"></img>
+
+Select "Deploy a Business Network"
+
+Under the "Model Network Starter Template", select "browse", and choose the pizza-on-the-blockchain@0.0.1.bna file from this repository.
 
 ## For Windows Users
 
