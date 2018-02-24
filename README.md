@@ -256,6 +256,9 @@ You can start and stop your runtime using ```~/fabric-tools/stopFabric.sh```, an
 At the end of your development session, you run ```~/fabric-tools/stopFabric.sh``` and then ```~/fabric-tools/teardownFabric.sh```. Note that if you've run the teardown script, the next time you start the runtime, you'll need to create a new PeerAdmin card just like you did on first time startup.
 
 ## Deploying the Business Network to Hyperledger Fabric
+
+### Creating the .bna file
+
 Once you have the environment set up, it's time to package everything into a .bna file. In order to do this, we're going to use a Yeoman generator to create a skeleton business network, then replace the model, script, and access control files with the ones we created earlier on in the tutorial.
 
 1. Create a skeleton business network using Yeoman. This command will require a business network name, description, author name, author email address, license selection and namespace.
@@ -268,7 +271,17 @@ Once you have the environment set up, it's time to package everything into a .bn
 
 4. Select ```org.acme.biznet``` as the namespace.
 
+5. ```cd``` into the folder which was just created and replace the contents of ```/pizza-on-the-blockchain/lib/org.example.biznet.cto``` with the model file generated earlier on in the tutorial.
 
+6. Replace the contents of ```/pizza-on-the-blockchain/lib/logic.js``` with the script file generated earlier on in the tutorial.
+
+7. Create a new file in the ```pizza-on-the-blockchain``` folder, called ```permissions.acl``` and paste the contents of the Access Control file generated earlier on in the tutorial.
+
+Now that you have your busines network, it's time to package it up into a .bna file. In the ```pizza-on-the-blockchain``` directory, enter the following command:
+
+```composer archive create -t dir -n .```
+
+After the command has run, a business network archive file called ```pizza-on-the-blockchain@0.0.1.bna``` has been created in the tutorial-network directory.
 
 
 ### Purpose
