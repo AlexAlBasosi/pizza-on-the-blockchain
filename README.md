@@ -1,18 +1,19 @@
-# Pizza! on the Blockchain 
+## Pizza! on the Blockchain
 
 ## Develop an end-to-end Blockchain application
 
-## What is Hyperledger Fabric?
+## What is Hyperledger Fabric
+
 Hyperledger Fabric is a platform for distributed ledger solutions, underpinned by a modular architecture delivering high degrees of confidentiality, resiliency, flexibility and scalability. It is designed to support pluggable implementations of different components, and accommodate the complexity and intricacies that exist across the economic ecosystem.
 
-<br/>
-<img src="/images/hyperledger.png"></img>
-<br/>
+![drawing](/images/hyperledger.png)
 
 ## What is Hyperledger Composer
+
 Hyperledger Composer is a set of collaboration tools for building blockchain business networks that make it simple and fast for business owners and developers to create smart contracts and blockchain applications to solve business problems.
 
 ### The Business Network
+
 * Head over to the Composer Playground: [Composer Playground](http://composer-playground.mybluemix.net/)
 <img src="/images/playground.png"></img>
 
@@ -21,9 +22,11 @@ Hyperledger Composer is a set of collaboration tools for building blockchain bus
 * Under the "Model Network Starter Template", select "browse", and choose the pizza-on-the-blockchain@0.0.1.bna file from this repository.
 
 <img src="/images/result.png"></img>
+
 * Select "Deploy"
 
 <img src="/images/connect.png"></img>
+
 * Select "Connect Now"
 
 You should be presented with the following screen:
@@ -45,7 +48,7 @@ Here we define the transactions that will take place on the Blockchain, such as 
 The ChangeStateToProduction function will change the state of the current pizza to Production.
 <img src="/images/state.png"></img>
 
-The same applies with the other three states. <br/>
+The same applies with the other three states.
 The ChangeOwner function will change the owner of the pizza to a new owner.
 <img src="/images/owner.png"></img>
 
@@ -75,11 +78,10 @@ You should see a notification pop up saying "Submit Transaction Successful". You
 
 That's it! You're ready to deploy your business network to the Hypelerledger Fabric.
 
-<br/><br/><br/>
-
 ## Setting up the Environment
 
 ### For Windows/Linux Users
+
 The Hyperledger Fabric environment can only be set up on Unix environments, so for windows users, you have to install a virtual machine and set up the environment as such. For the purposes of this demo, we're going to be setting up a Ubuntu OS on VirtualBox.
 
 Download Ubuntu: [Install Ubuntu](https://www.ubuntu.com/download/desktop) <br/>
@@ -87,6 +89,7 @@ Download VirtualBox [Install VirtualBox](https://www.virtualbox.org/wiki/Downloa
 Instructions for setting up Ubuntu on VirtualBox [Set Up Ubuntu on VirtualBox](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox) <br/>
 
 #### Installing Pre-Requisites
+
 To run Hyperledger Composer and Hyperledger Fabric, we recommend you have at least 4Gb of memory.
 
 The following are prerequisites for installing the required development tools:
@@ -132,7 +135,7 @@ Open the terminal (command line) by clicking on the magnifier in the menu bar at
 
 In the terminal window paste the text below and press enter:
 
-``` curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash ```
+```curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash```
 
 When you hit enter you should see the pop-up below, prompting you to install git. Press the Get Xcode button to install the full Apple Xcode IDE, including a C++ compiler, used to install native Node.js modules.
 
@@ -144,31 +147,31 @@ After Xcode finishes installing additional components and launches, simply quit 
 
 Switch back to the terminal and create your bash profile (stores user preferences for bash):
 
-``` touch .bash_profile ```
+```touch .bash_profile```
 
 Then rerun the original curl command:
 
-``` curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash ```
+```curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash```
 
 Close the terminal and reopen it.
 
 Check that nvm is installed and is accessible:
 
-``` nvm —-version ```
+```nvm —-version```
 
 ### Install Node
 
 Install the latest (long term support) version of Node:
 
-``` nvm install --lts ```
+```nvm install --lts```
 
 Switch to the LTS version of Node:
 
-``` nvm use --lts ```
+```nvm use --lts```
 
 Check that Node is installed:
 
-``` node --version ```
+```node --version```
 
 ### Install Docker
 
@@ -184,8 +187,6 @@ Press the “Download for Mac” button and copy the downloaded application into
 
 ### Install the Hyperledger Composer Extension for VSCode
 Type ```composer``` into the search bar and then press the ```Install``` button next to the Hyperleger Composer extension. Once the install completes you need to press the ```Reload``` button to activate the extension.
-
-<br/><br/><br/>
 
 
 ## Installing the Development Environment
@@ -285,7 +286,7 @@ Now that you have your busines network, it's time to package it up into a .bna f
 
 After the command has run, a business network archive file called ```pizza-on-the-blockchain@0.0.1.bna``` has been created in the tutorial-network directory.
 
-### Deploying the Business Network
+### Deploy the Business Network
 
 After creating the ```.bna``` file, the business network can be deployed to the instance of Hyperledger Fabric. Normally, information from the Fabric administrator is required to create a ```PeerAdmin``` identity, with privileges to deploy chaincode to the peer. However, as part of the development environment installation, a PeerAdmin identity has been created already.
 
